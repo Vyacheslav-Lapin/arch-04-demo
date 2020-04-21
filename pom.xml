@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0">
-	<modelVersion>4.0.0</modelVersion>
-	
-  <parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.6.RELEASE</version>
-	</parent>
+  <modelVersion>4.0.0</modelVersion>
 
-	<groupId>ru.vlapin.experiments</groupId>
-	<artifactId>arch-04-demo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.2.6.RELEASE</version>
+  </parent>
+
+  <groupId>ru.vlapin.experiments</groupId>
+  <artifactId>arch-04-demo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
 
   <properties>
-		
+
     <!--region General-->
     <java.version>14</java.version>
     <minimal.maven.version>3.6.1</minimal.maven.version>
     <!--endregion-->
-  
-		<!--region Bills of material (BOM)-->
+
+    <!--region Bills of material (BOM)-->
     <spring-cloud.version>Hoxton.SR3</spring-cloud.version>
     <!--endregion-->
-	
+
     <!--region Libs-->
     <vavr.version>0.10.2</vavr.version>
     <checker.version>3.3.0</checker.version>
@@ -55,76 +55,76 @@
 
   </properties>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-rest</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
-		</dependency>
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-rest</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-openfeign</artifactId>
+    </dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-devtools</artifactId>
+      <scope>runtime</scope>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <optional>true</optional>
+
       <scope>provided</scope>
     </dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>org.junit.vintage</groupId>
-					<artifactId>junit-vintage-engine</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	  <dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.junit.vintage</groupId>
+          <artifactId>junit-vintage-engine</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>io.vavr</groupId>
       <artifactId>vavr</artifactId>
-      </dependency>
-    
+    </dependency>
+
     <!--region Common Annotations (CheckerFramework, JetBrains, SpotBugs, ErrorProne)-->
     <dependency>
       <groupId>org.checkerframework</groupId>
@@ -152,7 +152,7 @@
       <groupId>org.testcontainers</groupId>
       <artifactId>junit-jupiter</artifactId>
     </dependency>
-  
+
     <!--region Swagger-->
     <dependency>
       <groupId>io.springfox</groupId>
@@ -174,21 +174,21 @@
 
   </dependencies>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		  <dependency>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
         <groupId>io.vavr</groupId>
         <artifactId>vavr</artifactId>
         <version>${vavr.version}</version>
-    </dependency>
-  
+      </dependency>
+
       <!--region Common Annotations (CheckerFramework, JetBrains, SpotBugs, ErrorProne)-->
       <dependency>
         <groupId>org.checkerframework</groupId>
@@ -228,7 +228,7 @@
         <version>${testcontainers.version}</version>
         <scope>test</scope>
       </dependency>
-    
+
       <!--region Swagger-->
       <dependency>
         <groupId>io.springfox</groupId>
@@ -253,13 +253,13 @@
       <!--endregion-->
 
     </dependencies>
-    
-	</dependencyManagement>
 
-	<build>
+  </dependencyManagement>
+
+  <build>
 
     <defaultGoal>spring-boot:run</defaultGoal>
-  
+
     <pluginManagement>
       <plugins>
         <plugin>
@@ -272,9 +272,9 @@
             </compilerArgs>
             <annotationProcessorPaths>
               <!--<processorPath>-->
-                <!--<groupId>systems.manifold</groupId>-->
-                <!--<artifactId>manifold-all</artifactId>-->
-                <!--<version>${manifold-version}</version>-->
+              <!--<groupId>systems.manifold</groupId>-->
+              <!--<artifactId>manifold-all</artifactId>-->
+              <!--<version>${manifold-version}</version>-->
               <!--</processorPath>-->
               <processorPath>
                 <groupId>org.projectlombok</groupId>
@@ -367,12 +367,12 @@
           </configuration>
           <executions>
             <execution>
-            <goals>
-              <goal>check</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+              <goals>
+                <goal>check</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
         <plugin>
           <artifactId>maven-checkstyle-plugin</artifactId>
           <version>${maven-checkstyle-plugin.version}</version>
@@ -416,32 +416,32 @@
               <artifactId>javax.activation-api</artifactId>
               <version>1.2.0</version>
             </dependency>
-          <dependency>
-            <groupId>org.codehaus.plexus</groupId>
-            <artifactId>plexus-archiver</artifactId>
-            <version>3.6.0</version>
-          </dependency>
-        </dependencies>
-      </plugin>
+            <dependency>
+              <groupId>org.codehaus.plexus</groupId>
+              <artifactId>plexus-archiver</artifactId>
+              <version>3.6.0</version>
+            </dependency>
+          </dependencies>
+        </plugin>
         <plugin>
-        <artifactId>maven-enforcer-plugin</artifactId>
-        <version>${maven-enforcer-plugin.version}</version>
-        <executions>
-          <execution>
-            <id>enforce-maven</id>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-            <configuration>
-              <rules>
-                <requireMavenVersion>
-                  <version>${minimal.maven.version}</version>
-                </requireMavenVersion>
-              </rules>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
+          <artifactId>maven-enforcer-plugin</artifactId>
+          <version>${maven-enforcer-plugin.version}</version>
+          <executions>
+            <execution>
+              <id>enforce-maven</id>
+              <goals>
+                <goal>enforce</goal>
+              </goals>
+              <configuration>
+                <rules>
+                  <requireMavenVersion>
+                    <version>${minimal.maven.version}</version>
+                  </requireMavenVersion>
+                </rules>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>versions-maven-plugin</artifactId>
@@ -452,24 +452,24 @@
           </configuration>
         </plugin>
         <plugin>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok-maven-plugin</artifactId>
-        <version>${lombok-maven-plugin.version}</version>
-      </plugin>
+          <groupId>org.projectlombok</groupId>
+          <artifactId>lombok-maven-plugin</artifactId>
+          <version>${lombok-maven-plugin.version}</version>
+        </plugin>
       </plugins>
     </pluginManagement>
-		
+
     <plugins>
-      
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			  <configuration>
+
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
           <executable>true</executable>
           <jvmArguments>--enable-preview</jvmArguments>
         </configuration>
       </plugin>
-		
+
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>versions-maven-plugin</artifactId>
@@ -489,9 +489,9 @@
         <artifactId>jacoco-maven-plugin</artifactId>
       </plugin>
       <plugin>
-       <groupId>org.codehaus.mojo</groupId>
-       <artifactId>sonar-maven-plugin</artifactId>
-     </plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+      </plugin>
       <plugin>
         <groupId>com.spotify</groupId>
         <artifactId>dockerfile-maven-plugin</artifactId>
@@ -500,10 +500,10 @@
         <artifactId>maven-enforcer-plugin</artifactId>
       </plugin>
       <plugin>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok-maven-plugin</artifactId>
-    </plugin>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok-maven-plugin</artifactId>
+      </plugin>
     </plugins>
-	</build>
+  </build>
 
 </project>
